@@ -59,7 +59,7 @@ export default class Coin {
 		// default to display in mint denom if it has more than 4 decimal places
 		let minStake = this._coin.fraction/(precision?Math.pow(10, precision):10000)
 		if (this.amount < minStake) {
-			return `${numbro(this.amount).format('0,0.0000' )} ${this._coin.denom}`;
+			return `${numbro(this.amount).format('0,0.' )} ${this._coin.denom}`;
 		} else {
 			return `${precision?numbro(this.stakingAmount).format('0,0.' + '0'.repeat(precision)):autoformat(this.stakingAmount)} ${this._coin.displayName}`
 		}
