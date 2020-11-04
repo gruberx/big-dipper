@@ -430,7 +430,7 @@ Meteor.methods({
                                         validator.jailed = validatorData.jailed;
                                         validator.status = validatorData.status;
                                         validator.tokens = validatorData.tokens;
-                                        validator.delegator_shares = validatorData.delegator_shares;
+                                        validator.delegator_shares = validatorData.bonding_delegator_shares;
                                         validator.description = validatorData.description;
                                         validator.bond_height = validatorData.bond_height;
                                         validator.bond_intra_tx_counter = validatorData.bond_intra_tx_counter;
@@ -446,8 +446,8 @@ Meteor.methods({
 
                                                 if (response.statusCode == 200){
                                                     let selfDelegation = JSON.parse(response.content).result;
-                                                    if (selfDelegation.shares){
-                                                        validator.self_delegation = parseFloat(selfDelegation.shares)/parseFloat(validator.delegator_shares);
+                                                    if (selfDelegation.bonding_shares){
+                                                        validator.self_delegation = parseFloat(selfDelegation.bonding_shares)/parseFloat(validator.delegator_shares);
                                                     }
                                                 }
                                             }
