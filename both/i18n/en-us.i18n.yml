@@ -24,7 +24,7 @@ common:
     retry: 'Retry'
     rewards: 'Rewards'
 navbar:
-    siteName: 'The Big Dipper'
+    siteName: 'Ursus'
     version: 'beta'
     validators: 'Validators'
     blocks: 'Blocks'
