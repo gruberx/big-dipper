@@ -23,7 +23,7 @@ common:
     cancel: '取消'
     retry: '重試'
 navbar:
-    siteName: '北斗'
+    siteName: 'Ursus'
     version: 'beta'
     validators: '驗證人'
     blocks: '區塊'
