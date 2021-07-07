@@ -49,16 +49,6 @@ get stakingAmount () {
     return (this._coin)?this._amount / this._coin.fraction:this._amount;
 }
 
-<<<<<<< HEAD
-	stakeString (formatter) {
-		let amount = this.stakingAmount
-		if (formatter) {
-			amount = numbro(amount).format(formatter)
-		}
-		return `${amount} ${Coin.StakingCoin.displayName}`;
-	}
-}
-=======
 toString (precision) {
     // default to display in mint denom if it has more than 4 decimal places
     let minStake = Coin.StakingCoin.fraction/(precision?(10 ** precision):10000)
@@ -79,4 +69,3 @@ toString (precision) {
     }
 }
 }
->>>>>>> master
