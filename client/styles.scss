@@ -78,7 +78,18 @@ body {
     }
   }
   
+  .ledger-sign-in .error-message, .ledger-modal .error-message {
+    color: red;
+  }
+
   #header {
+    .sign-in-btn {
+      margin-top: 5px;
+    }
+
+    a.navbar-brand span {
+      font-family: 'Red Hat Display', sans-serif;
+    }
     .dropdown-header img {
       height: 2em;
       margin-right: 0.25em;
@@ -97,17 +108,7 @@ body {
     .sign-in-btn {
       color: rgba(255, 255, 255, 0.75);
     }
-  }
-  
-  .ledger-sign-in .error-message, .ledger-modal .error-message {
-    color: red;
-  }
-  
-  #header {
-    .sign-in-btn {
-      margin-top: 5px;
-    }
-  
+
     #user-acconut-icon {
       a {
         position: relative;
@@ -169,6 +170,17 @@ body {
     &#main, &#transaction, &#block {
       padding-top: 6rem;
       padding-bottom: 3.85rem;
+
+      .banner {
+        a {
+          display: block;
+          width: 100%;
+          
+          img {
+            max-width: 100%
+          }
+        }
+      }
     }
   
     &#transaction .card.card-body {
@@ -344,7 +356,7 @@ body {
   }
   
   .progress {
-    height: inherit !important;
+    height: 1.5rem !important;
     font-size: inherit !important;
     border: 1px solid #ddd !important;
   }
@@ -527,6 +539,23 @@ body {
    }
 
   }
+
+  .ledger-address-list{
+    overflow: auto;
+    width: 100%;
+    display: inline-flex;
+
+  }
+
+  .ledger-loader{
+    margin-top: 4em
+  }
+
+  .btn-ledger-login{
+    width: 13rem;
+    border: solid 1px #c6c6c6;
+    box-shadow: none;
+  }
   
   .vp-diff {
     display: inline-block;
@@ -662,6 +691,12 @@ body {
     .nav-link {
       cursor: pointer;
     }
+  }
+
+  .tx-list-homepage {
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 52em;
   }
   
   @media only screen and (max-width: 767px) {
