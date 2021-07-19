@@ -83,7 +83,7 @@ export default class AccountDetails extends Component{
                 this.setState({delegations: result.delegations || []})
                 if (result.delegations && result.delegations.length > 0){
                     result.delegations.forEach((delegation, i) => {
-                        const amount = delegation.bonding_balance.amount || delegation.bonding_balance;
+                        const amount = delegation.balance.amount || delegation.balance
                         this.setState({
                             delegated: this.state.delegated+parseFloat(amount),
                         })
